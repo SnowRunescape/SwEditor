@@ -1,4 +1,4 @@
-.SwScEditorMain {
+.richEditorMain {
 	position:relative;
 	font-family:BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 	padding: 0px;
@@ -7,21 +7,9 @@
 	margin-top: 6px;
 }
 
-.SwScEditorMenu {
+.richEditorMenu {
 	background-color: #EEEEEE;
 	padding: 1px 5px 5px 5px;
-}
-
-.SwScEditorFooter {
-	background-color:#bbb;
-	padding:2px;
-	padding-left:4px;
-	text-align:right;
-}
-
-.SwScEditorFooter a {
-	color:#ffffff;
-	text-decoration:none;
 }
 
 #richTextField {
@@ -31,12 +19,12 @@
 	word-break:break-word;
 }
 
-.SwScEditorMenu-1 {
+.richEditorMenu-1 {
 	display: inline-block;
 	margin-top:4px;
 }
 
-.SwScEditorMenu-2 {
+.richEditorMenu-2 {
 	background-color:#FFFFFF;
 	border-radius:6px;
 	border: solid 1px #CCCCCC;
@@ -45,7 +33,7 @@
 	margin-left:4px;
 }
 
-.SwScEditorMenu-3, .SwScEditorMenu-4, .SwScEditorMenu-5 {
+.richEditorMenu-3, .richEditorMenu-4, .richEditorMenu-5 {
 	background-color:#FFFFFF;
 	margin-left:4px;
 	margin-top:4px;
