@@ -5,8 +5,9 @@ const functionsTypesEditor = ['bold', 'italic', 'underline', 'strikeThrough', 'j
 const extensionsAcceptsImage = ['.png', '.jpg', '.jpeg', '.gif'];
 
 /**
- * Constants responsible for the formation of the modal
+ * Constants responsible for the formation of the rich editor and modals
  **/
+const contentRichEditor = '';
 const contentInsertLink = '<div id="richTextModalMain"><div id="richTextModalHeader"><div id="richTextModalHeader-Title">Inserir Link</div><div id="richTextModalHeader-Close"></div></div><div id="richTextModalBody"><div id="richTextModalError"></div><input type="text" id="richTextModalInputLink" placeholder="Insira a URL aqui..."></div><div id="richTextModalFooter" class="richTextModalAlignRight"><button class="richTextModalButton richTextModalButtonBlue" onclick="execInsertLink();">OK</button><button class="richTextModalButton" onclick="closeModal();">Cancelar</button></div></div>';
 const contentInsertImage = '<div id="richTextModalMain" class="richTextModalExpand"><div id="richTextModalHeader"><div id="richTextModalHeader-Title">Inserir Imagem</div><div id="richTextModalHeader-Close"></div></div><div id="richTextModalBody"><div id="richTextModalError"></div><div id="richTextModalPreviewImage"><img></div><div id="richTextModalImageBody"><div id="richTextModalUploadImage"><h3>Selecione uma imagem:</h3><input type="file" id="richTextModalInputUploadImage" onchange="ProcessImagePreview(this);"></div><div id="richTextModalImportImage"><h3>Se preferir, informe uma URL:</h3><input type="text" id="richTextModalInputLink" placeholder="Insira a URL aqui..." onkeyup="ProcessImagePreview(this);"></div><div id="richTextModalImporteImageManager"><label class="toggle"><input id="field-saveImageSnowDev" class="toggle__input" type="checkbox" value="1" checked><span class="toggle__label"><span class="toggle__text">Deseja salvar a imagem da URL na SnowDev?</span></span></label></div></div></div><div id="richTextModalFooter" class="richTextModalAlignRight"><button class="richTextModalButton richTextModalButtonBlue" onclick="execInsertImage();">OK</button><button class="richTextModalButton" onclick="closeModal();">Cancelar</button></div></div>';
 
@@ -59,6 +60,10 @@ function ProcessImagePreview(image){
 	} else if(endsWithAny(extensionsAcceptsImage, image.value)){
 		$('#richTextModalPreviewImage img').attr('src', image.value);
 	}
+}
+
+function getContent(){
+	return richTextField.document.getElementsByTagName('body')[0].innerHTML;
 }
 
 /**
