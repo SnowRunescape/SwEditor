@@ -1,71 +1,71 @@
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Simple Rich Editor</title>
-	</head>
-	
-	<body>
-		<div class="richEditorMain">
-			<div id="richTextModal"></div>
-			
-			<div class="richEditorMenu">
-				<div class="richEditorMenu-1">
-					<select id="fontName" onchange="execCommandWithArg('fontName', this.value);" title="Fontes">
-						<option value="Arial" selected="selected">Arial</option>
-						<option value="Comic Sans MS">Comic Sans MS</option>
-						<option value="Georgia">Georgia</option>
-						<option value="Tahoma">Tahoma</option>
-						<option value="Times New Roman">Times New Roman</option>
-						<option value="Verdana">Verdana</option>
-					</select>
-					
-					<select id="fontSize" onchange="execCommandWithArg('fontSize', this.value);" title="Tamanho da Fonte">
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3" selected="selected">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-						<option value="7">7</option>
-						<option value="8">8</option>
-						<option value="9">9</option>
-					</select>
-				</div>
-				
-				<div class="richEditorMenu-2">
-					<a id="foreColor" onclick="execCommandWithArg('foreColor', this.value);" title="Cor do Texto"><i class="mdi mdi-format-color-fill"></i></a>
-				</div>
-				
-				<div class="richEditorMenu-3">
-					<a id="bold" onclick="execCmd('bold');" title="Negrito"><i class="mdi mdi-format-bold"></i></a>
-					<a id="italic" onclick="execCmd('italic');" title="Itálico"><i class="mdi mdi-format-italic"></i></a>
-					<a id="underline"" onclick="execCmd('underline');" title="Sublinhado"><i class="mdi mdi-format-underline"></i></a>
-					<a id="strikeThrough" onclick="execCmd('strikeThrough');" title="Riscado"><i class="mdi mdi-format-strikethrough"></i></a>
-				</div>
-				
-				<div class="richEditorMenu-4">
-					<a id="justifyLeft" onclick="execCmd('justifyLeft');" title="Alinhar à Esquerda"><i class="mdi mdi-format-align-left"></i></a>
-					<a id="justifyCenter" onclick="execCmd('justifyCenter');" title="Centralizar"><i class="mdi mdi-format-align-center"></i></a>
-					<a id="justifyRight" onclick="execCmd('justifyRight');" title="Alinhar à Direita"><i class="mdi mdi-format-align-right"></i></a>
-				</div>
-				
-				<div class="richEditorMenu-5">
-					<a id="InsertLink" onclick="openModal('InsertLink');"><i class="mdi mdi-link-variant"></i></a>
-					<a id="unlink" onclick="execCmd('unlink');" title="Remover Link"><i class="mdi mdi-link-variant-remove"></i></a>
-					<a id="InsertImage" onclick="openModal('InsertImage');"><i class="mdi mdi-image-filter"></i></a>
-				</div>
-			</div>
-			
-			<iframe id="richTextField" name="richTextField"></iframe>
-		</div>
-		
-		<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.7.95/css/materialdesignicons.min.css">
-		<link rel="stylesheet" href="assets/css/SwEditor.css">
-		
-		<script src="https://cdn.snowdev.com.br/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="assets/js/SwEditor.js"></script>
-		
-		<script>enableEditMode();</script>
-	</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Simple Rich Editor</title>
+    </head>
+
+    <body>
+        <div class="richEditorMain">
+            <div id="richTextModal"></div>
+
+            <div class="richEditorMenu">
+                <div class="richEditorMenu-1">
+                    <select id="fontName" onchange="execCommandWithArg('fontName', this.value);" title="Fontes">
+                        <option value="Arial" selected="selected">Arial</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Verdana">Verdana</option>
+                    </select>
+
+                    <select id="fontSize" onchange="execCommandWithArg('fontSize', this.value);" title="Tamanho da Fonte">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected="selected">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+
+                <div class="richEditorMenu-2">
+                    <a id="foreColor" onclick="execCommandWithArg('foreColor', this.value);" title="Cor do Texto"><i class="mdi mdi-format-color-fill"></i></a>
+                </div>
+
+                <div class="richEditorMenu-3">
+                    <a id="bold" onclick="execCmd('bold');" title="Negrito"><i class="mdi mdi-format-bold"></i></a>
+                    <a id="italic" onclick="execCmd('italic');" title="Itálico"><i class="mdi mdi-format-italic"></i></a>
+                    <a id="underline"" onclick="execCmd('underline');" title="Sublinhado"><i class="mdi mdi-format-underline"></i></a>
+                    <a id="strikeThrough" onclick="execCmd('strikeThrough');" title="Riscado"><i class="mdi mdi-format-strikethrough"></i></a>
+                </div>
+
+                <div class="richEditorMenu-4">
+                    <a id="justifyLeft" onclick="execCmd('justifyLeft');" title="Alinhar à Esquerda"><i class="mdi mdi-format-align-left"></i></a>
+                    <a id="justifyCenter" onclick="execCmd('justifyCenter');" title="Centralizar"><i class="mdi mdi-format-align-center"></i></a>
+                    <a id="justifyRight" onclick="execCmd('justifyRight');" title="Alinhar à Direita"><i class="mdi mdi-format-align-right"></i></a>
+                </div>
+
+                <div class="richEditorMenu-5">
+                    <a id="InsertLink" onclick="openModal('InsertLink');"><i class="mdi mdi-link-variant"></i></a>
+                    <a id="unlink" onclick="execCmd('unlink');" title="Remover Link"><i class="mdi mdi-link-variant-remove"></i></a>
+                    <a id="InsertImage" onclick="openModal('InsertImage');"><i class="mdi mdi-image-filter"></i></a>
+                </div>
+            </div>
+
+            <iframe id="richTextField" name="richTextField"></iframe>
+        </div>
+
+        <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.7.95/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="assets/css/SwEditor.css">
+
+        <script src="https://cdn.snowdev.com.br/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="assets/js/SwEditor.js"></script>
+
+        <script>enableEditMode();</script>
+    </body>
 </html>
